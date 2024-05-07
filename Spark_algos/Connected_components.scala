@@ -2,9 +2,9 @@ import org.apache.spark.graphx.GraphLoader
 import org.apache.spark.graphx._
 import org.apache.spark.sql.functions._
 
-val graph = GraphLoader.edgeListFile(sc, "hdfs://nn.xxxxxxxxx:port_no/social_network.txt")
+val graph = GraphLoader.edgeListFile(sc, "hdfs://nn.xxxxxxxxx:port_no/deezer_network.txt")
 val cc = graph.connectedComponents().vertices
-val users = sc.textFile("hdfs://nn.xxxxxxxxx:port_no/Twitter_Id.txt").map { line => line.split(" ")
+val users = sc.textFile("hdfs://nn.xxxxxxxxx:port_no/Deezer_Id_HR.txt").map { line => line.split(" ")
 match { case Array(id, name) => (id.toLong, name.toInt) } }
 val join = users.join(cc).map {case (id, (username, cc)) => (username, cc)}
 val grp = join.groupBy{ case(_, (cc)) => cc}.mapValues(iter => iter.size)
