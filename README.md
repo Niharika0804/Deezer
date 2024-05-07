@@ -32,4 +32,3 @@ HU	47,538	 222,887
 **IMPORTANT NOTE**
 Please set the Apache Hadoop and Spark environment before executing the algorithms.
 Make sure to upload the data into the Hadoop HDFS.
-The link our report: 
