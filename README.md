@@ -24,7 +24,7 @@ HU	47,538	 222,887
    user ids => deezer_id_RO.txt
 2. Croatia:
    user connections => HR_edges.txt
-   user ids => deezer_id.txt
+   user ids => deezer_id_HR.txt
 3. Hungary:
    user connections => HU_edges.txt
    user ids => deezer_id_HU.txt
